@@ -40,14 +40,4 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       return emit(AuthFailure('Failed to Logout, please try later'));
     }
   }
-  @override
-  void onChange(Change<AuthState> change) {
-    super.onChange(change);
-    print('AuthBloc - $change');
-  }
-  @override
-  void onTransition(Transition<AuthEvent, AuthState> transition) {
-    super.onTransition(transition);
-    print('AuthBloc - $transition');
-  }
 }
